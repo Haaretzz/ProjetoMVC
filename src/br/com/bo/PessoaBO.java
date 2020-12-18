@@ -10,13 +10,8 @@ public class PessoaBO {
 		try {
 			PessoaBean pessoaBean = new PessoaBean(nome, matricula, disciplina);
 			PessoaDAO pessoaDao = new PessoaDAO();
-			
-			if(pessoaDao.insert(pessoaBean) == true) {
-				return "Saida.jsp";
-			}
-			else {
-				return "Entrada.jsp";
-			}
+			return "Saida.jsp";
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			return "Entrada.jsp";
